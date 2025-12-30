@@ -1,1 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
 @import "tailwindcss";
+
+@layer base {
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    body {
+        @apply bg-[#0F1117] text-[#E5E7EB];
+    }
+
+    /* Headings */
+    h1,
+    h2,
+    h3 {
+        @apply text-[#F9FAFB];
+    }
+
+    /* Paragraphs */
+    p {
+        @apply text-[#D1D5DB];
+    }
+}
+
+/* Glass containers */
+@layer components {
+    .glass {
+        @apply bg-white/10 backdrop-blur-md border border-white/10 shadow-lg;
+    }
+
+    .glass-light {
+        @apply bg-white/80 backdrop-blur-md border border-black/5;
+    }
+}
+
+/* Dark mode overrides */
+@layer utilities {
+    .dark body {
+        @apply bg-[#0B0E14] text-[#E5E7EB];
+    }
+
+    .dark .glass-light {
+        @apply bg-white/10 border-white/10;
+    }
+
+    .dark button {
+        @apply bg-white/10 text-white;
+    }
+
+    .dark p {
+        @apply text-gray-300;
+    }
+}
