@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { LuSunMoon, LuMenu, LuX } from 'react-icons/lu'
 import arrowicondark from '../assets/right-arrow-bold.png'
-import lgo from '../assets/logo_512.png' // Your image logo
+import lgo from '../assets/logo_512.png'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -33,6 +33,7 @@ const Navbar = () => {
       px-5 py-3
       border-b-2 border-gray-200 dark:border-gray-700
       shadow-lg shadow-black/10 dark:shadow-black/40
+      mt-2
     ">
 
       {/* Rounded Image Logo */}
