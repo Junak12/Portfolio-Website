@@ -13,15 +13,15 @@ const Root = () => {
         dark:from-[#0B0E14] dark:via-[#111827] dark:to-[#1F2933]
         transition-colors duration-300
       "
+      id='home'
     >
-      {/* Fixed Navbar inside max-w container */}
+
       <div className="fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-2 ">
           <Navbar />
         </div>
       </div>
 
-      {/* Add top padding so content is not hidden behind fixed navbar */}
       <div className="max-w-7xl mx-auto py-28 px-2">
         <Outlet />
         <Footer />

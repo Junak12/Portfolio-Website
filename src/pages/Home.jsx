@@ -6,7 +6,7 @@ import Achievements from '../components/Achievements'
 
 const Home = () => {
   return (
-    <div className='mt-15'>
+    <div className='mt-10'>
       <Hero />
       <div className='mt-20'>
         <Projects />

@@ -7,12 +7,12 @@ const Footer = () => {
       
       <div className="max-w-7xl mx-auto px-6 md:px-20">
 
-        {/* Top Row: Name + Social Links */}
+        
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-xl font-bold text-black/80 dark:text-gray-200">S S P Junak</h3>
 
           <div className="flex gap-3">
-            {/* Facebook */}
+            
             <a
               href="https://www.facebook.com/siddharth.paul.junak/"
               target="_blank"
@@ -22,7 +22,6 @@ const Footer = () => {
               <FaFacebookF />
             </a>
 
-            {/* Instagram */}
             <a
               href="https://www.instagram.com/siddharth_junak/?hl=en"
               target="_blank"
@@ -32,7 +31,6 @@ const Footer = () => {
               <FaInstagram />
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/s-s-p-junak-99942a252/"
               target="_blank"
@@ -42,7 +40,6 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
 
-            {/* GitHub */}
             <a
               href="https://github.com/Junak12"
               target="_blank"
@@ -55,10 +52,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
         <hr className="border-gray-300 dark:border-gray-600 mb-4" />
 
-        {/* Bottom Row: All rights reserved */}
         <div className="text-black/50 dark:text-gray-400 text-center text-sm">
           © 2025 All rights reserved
         </div>

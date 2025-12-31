@@ -17,7 +17,7 @@ const Achievements = () => {
   ]
 
   return (
-    <section className="px-4 md:px-20 py-10">
+    <section className="px-4 md:px-20 py-10" id='honor'>
       <h2 className="text-3xl font-bold text-center text-black/80 dark:text-gray-200 mb-4">
         Achievements
       </h2>

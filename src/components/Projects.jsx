@@ -38,7 +38,7 @@ const Projects = () => {
   ]
 
   return (
-    <div className="px-4 md:px-20 py-10">
+    <div className="px-4 md:px-20 py-10" id='projects'>
       <h1 className='text-[32px] font-bold text-black/80 dark:text-gray-300 text-center mb-4'>My Projects</h1>
       <p className='text-center text-black/70 dark:text-gray-300 mb-10'>
         Explore a selection of my projects, showcasing my expertise in full-stack and front-end development, <br />
@@ -73,7 +73,6 @@ const Projects = () => {
               ))}
             </div>
 
-            {/* GitHub Button */}
             <button
               onClick={() => window.open(project.github, "_blank")}
               className="mt-4 bg-gray-700 dark:bg-[#0F172A]/70 text-white px-4 py-2 rounded-lg hover:scale-90 transition cursor-pointer"
