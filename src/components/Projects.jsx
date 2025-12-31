@@ -40,24 +40,32 @@ const Projects = () => {
   return (
     <div className="px-4 md:px-20 py-10">
       <h1 className='text-[32px] font-bold text-black/80 dark:text-gray-300 text-center mb-4'>My Projects</h1>
-      <p className='text-center text-black/70  dark:text-gray-300 mb-10'>
-        Explore a selection of my projects, showcasing my expertise in full-stack and front-end development, <br /> problem-solving, and creating responsive, user-friendly applications.
+      <p className='text-center text-black/70 dark:text-gray-300 mb-10'>
+        Explore a selection of my projects, showcasing my expertise in full-stack and front-end development, <br />
+        problem-solving, and creating responsive, user-friendly applications.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
           <div
             key={idx}
-            className="bg-gradient-to-br from-[#E3F2FD] via-[#F0F7FF] to-[#FFFFFF] 
-                       dark:from-gray-900 dark:via-gray-800 dark:to-gray-700
-                       rounded-2xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform duration-200 h-full"
+            className="
+              flex flex-col
+              border-2 border-white dark:border-gray-700/50
+              rounded-xl
+              px-6 py-4
+              shadow-[0_6px_20px_rgba(0,0,0,0.08)] dark:shadow-[0_6px_20px_rgba(0,0,0,0.45)]
+              text-center
+              hover:scale-105 transition
+              h-full
+            "
           >
             <img src={project.img} alt={project.title} className="rounded-xl mb-4 object-cover h-48 w-full" />
             <h2 className="text-xl font-semibold text-black/80 dark:text-gray-200 mb-2">{project.title}</h2>
             <p className="text-black/70 dark:text-gray-300 text-[14px] font-light flex-1">{project.description}</p>
 
             {/* Technologies */}
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-2 mt-4 justify-center">
               {project.tech.map((t, i) => (
                 <span key={i} className={`text-sm px-3 py-1 rounded-full ${techColors[i % techColors.length]}`}>
                   {t}
@@ -68,7 +76,7 @@ const Projects = () => {
             {/* GitHub Button */}
             <button
               onClick={() => window.open(project.github, "_blank")}
-              className="mt-4 bg-gray-700 dark:bg-[#0F172A]/70 text-white px-4 py-2 rounded-lg hover:scale-90 transition hover:cursor-pointer"
+              className="mt-4 bg-gray-700 dark:bg-[#0F172A]/70 text-white px-4 py-2 rounded-lg hover:scale-90 transition cursor-pointer"
             >
               Github
             </button>
