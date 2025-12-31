@@ -1,11 +1,12 @@
-import React, { useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Contact = () => {
-  const form = useRef()
+  const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     emailjs.sendForm(
       'service_cvj4ura',
@@ -14,20 +15,19 @@ const Contact = () => {
       '_gYbjpUSI0B2jHDF_'
     ).then(
       () => {
-        alert('Message sent successfully!')
-        form.current.reset()
+        toast.success('Message sent successfully!');
+        form.current.reset();
       },
       (error) => {
-        alert('Failed to send message. Please try again.')
-        console.error(error)
+        toast.error('Failed to send message. Please try again.');
+        console.error(error);
       }
-    )
-  }
+    );
+  };
 
   return (
-    <section className="px-4 md:px-20 py-10" id='contact'>
+    <section className="px-4 md:px-20 py-10" id="contact">
       <div className="max-w-3xl mx-auto">
-
         <h2 className="text-3xl font-bold text-center text-black/80 dark:text-gray-200">
           Get In Touch
         </h2>
@@ -96,10 +96,23 @@ const Contact = () => {
           >
             Send Message
           </button>
+
+          {/* Toaster positioned below the button */}
+          <Toaster
+            position="bottom-center"
+            containerClassName="mt-2"
+            toastOptions={{
+              style: {
+                background: '#1F2937', // dark gray background
+                color: '#fff',
+                fontSize: '14px',
+              },
+            }}
+          />
         </form>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
