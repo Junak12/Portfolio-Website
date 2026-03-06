@@ -96,14 +96,12 @@ const Contact = () => {
           >
             Send Message
           </button>
-
-          {/* Toaster positioned below the button */}
           <Toaster
             position="bottom-center"
             containerClassName="mt-2"
             toastOptions={{
               style: {
-                background: '#1F2937', // dark gray background
+                background: '#1F2937', 
                 color: '#fff',
                 fontSize: '14px',
               },
